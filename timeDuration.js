@@ -12,7 +12,8 @@ const  TimeDuration =(data)=>{
             min= Math.trunc(min+(sec/60));
             sec = sec%60
         }
-    return hr+"h"+":"+min+"m"+":"+sec+"s"
+    if(hr<24) return hr+"h"+":"+min+"m"+":"+sec+"s";
+    else return "you explode the range"
 }
 const tmd = TimeDuration(6343)
 console.log(tmd)
